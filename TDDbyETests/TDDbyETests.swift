@@ -41,4 +41,9 @@ class TDDbyETests: XCTestCase {
         XCTAssertEqual(15, product2.amount)
     }
     
+    func testEquality() {
+        XCTAssert(Dollar(amount: 5).equals(Dollar(amount: 5)), "Equality test failed: $5 != $5")
+        XCTAssertFalse(Dollar(amount: 5).equals(Dollar(amount: 6)), "Equality test failed: $5 != $6")
+    }
+    
 }
