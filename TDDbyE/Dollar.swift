@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Dollar {
+class Dollar : Equatable {
     var amount: Int
     
     init(amount:Int) {
@@ -18,9 +18,8 @@ class Dollar {
     func times(multiplier:Int) -> Dollar {
         return Dollar(amount: amount * multiplier)
     }
-    
-    func equals(object:AnyObject) -> Bool {
-        let dollar = object as! Dollar
-        return amount == dollar.amount
-    }
+}
+
+func ==(lhs: Dollar, rhs: Dollar) -> Bool {
+    return lhs.amount == rhs.amount
 }

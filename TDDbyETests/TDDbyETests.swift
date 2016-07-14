@@ -35,15 +35,13 @@ class TDDbyETests: XCTestCase {
     
     func testMultiplication() {
         let five = Dollar(amount: 5)
-        let product1 = five.times(2)
-        XCTAssertEqual(10, product1.amount)
-        let product2 = five.times(3)
-        XCTAssertEqual(15, product2.amount)
+        XCTAssertEqual(Dollar(amount: 10), five.times(2))
+        XCTAssertEqual(Dollar(amount: 15), five.times(3))
     }
     
     func testEquality() {
-        XCTAssert(Dollar(amount: 5).equals(Dollar(amount: 5)), "Equality test failed: $5 != $5")
-        XCTAssertFalse(Dollar(amount: 5).equals(Dollar(amount: 6)), "Equality test failed: $5 != $6")
+        XCTAssertEqual(Dollar(amount: 5), Dollar(amount: 5), "Equality test failed: $5 != $5")
+        XCTAssertNotEqual(Dollar(amount: 5), Dollar(amount: 6), "Equality test failed: $5 != $6")
     }
     
 }
