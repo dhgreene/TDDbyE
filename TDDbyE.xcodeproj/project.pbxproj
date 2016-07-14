@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BE052F591D374D350092F51F /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE052F581D374D350092F51F /* Money.swift */; };
+		BE052F5D1D3774E50092F51F /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE052F5C1D3774E50092F51F /* Bank.swift */; };
+		BE052F5F1D37754C0092F51F /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE052F5E1D37754C0092F51F /* Expression.swift */; };
 		BEEF9F6E1D36889700B502B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF9F6D1D36889700B502B3 /* AppDelegate.swift */; };
 		BEEF9F701D36889700B502B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF9F6F1D36889700B502B3 /* ViewController.swift */; };
 		BEEF9F731D36889700B502B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEEF9F711D36889700B502B3 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		BE052F581D374D350092F51F /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
+		BE052F5C1D3774E50092F51F /* Bank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
+		BE052F5E1D37754C0092F51F /* Expression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expression.swift; sourceTree = "<group>"; };
 		BEEF9F6A1D36889700B502B3 /* TDDbyE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDDbyE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF9F6D1D36889700B502B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEEF9F6F1D36889700B502B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				BEEF9F761D36889700B502B3 /* LaunchScreen.storyboard */,
 				BEEF9F791D36889700B502B3 /* Info.plist */,
 				BE052F581D374D350092F51F /* Money.swift */,
+				BE052F5C1D3774E50092F51F /* Bank.swift */,
+				BE052F5E1D37754C0092F51F /* Expression.swift */,
 			);
 			path = TDDbyE;
 			sourceTree = "<group>";
@@ -260,8 +266,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE052F591D374D350092F51F /* Money.swift in Sources */,
+				BE052F5D1D3774E50092F51F /* Bank.swift in Sources */,
 				BEEF9F701D36889700B502B3 /* ViewController.swift in Sources */,
 				BEEF9F6E1D36889700B502B3 /* AppDelegate.swift in Sources */,
+				BE052F5F1D37754C0092F51F /* Expression.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Money: Equatable {
+class Money: Equatable, Expression {
     var amount: Int
     var currency: String
 
@@ -16,10 +16,13 @@ class Money: Equatable {
         self.amount = amount
         self.currency = currency
     }
-    
-    // Abstract implementation
-    func times(multiplier:Int) -> Money! {
+
+    func times(multiplier:Int) -> Money {
         return Money(amount: multiplier * amount, currency: currency)
+    }
+
+    func plus(addend:Money) -> Money {
+        return Money(amount: amount + addend.amount, currency: currency)
     }
     
     static func dollar(amount:Int) -> Money {
