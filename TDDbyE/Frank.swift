@@ -8,18 +8,5 @@
 
 import Foundation
 
-class Franc : Equatable {
-    var amount: Int
-    
-    init(amount:Int) {
-        self.amount = amount
-    }
-    
-    func times(multiplier:Int) -> Franc {
-        return Franc(amount: amount * multiplier)
-    }
-}
-
-func ==(lhs: Franc, rhs: Franc) -> Bool {
-    return lhs.amount == rhs.amount
+class Franc : Money {
 }
