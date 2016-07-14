@@ -14,13 +14,10 @@ class Money: Equatable {
     init(amount:Int) {
         self.amount = amount
     }
-    
-    func times(multiplier:Int) -> Money {
-        return Money(amount: amount * multiplier)
-    }
-
 }
 
 func ==(lhs: Money, rhs: Money) -> Bool {
-    return lhs.amount == rhs.amount
+    return
+        lhs.amount == rhs.amount &&
+        Mirror(reflecting: lhs).subjectType == Mirror(reflecting: rhs).subjectType
 }

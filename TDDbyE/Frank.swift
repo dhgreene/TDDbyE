@@ -9,4 +9,7 @@
 import Foundation
 
 class Franc : Money {
+    func times(multiplier:Int) -> Franc {
+        return Franc(amount: amount * multiplier)
+    }
 }

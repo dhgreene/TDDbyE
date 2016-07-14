@@ -41,9 +41,10 @@ class TDDbyETests: XCTestCase {
     
     func testEquality() {
         XCTAssertEqual(Dollar(amount: 5), Dollar(amount: 5), "Equality test failed: $5 != $5")
-        XCTAssertNotEqual(Dollar(amount: 5), Dollar(amount: 6), "Equality test failed: $5 != $6")
+        XCTAssertNotEqual(Dollar(amount: 5), Dollar(amount: 6), "Equality test failed: $5 == $6")
         XCTAssertEqual(Franc(amount: 5), Franc(amount: 5), "Equality test failed: 5 francs != 5 francs")
-        XCTAssertNotEqual(Franc(amount: 5), Franc(amount: 6), "Equality test failed: 5 francs != 6 francs")
+        XCTAssertNotEqual(Franc(amount: 5), Franc(amount: 6), "Equality test failed: 5 francs == 6 francs")
+        XCTAssertNotEqual(Franc(amount: 5), Dollar(amount: 5), "Equality test failed: 5 francs == $5")
     }
     
     func testFrancMultiplication() {
