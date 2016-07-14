@@ -47,13 +47,13 @@ class TDDbyETests: XCTestCase {
     
     func testFrancMultiplication() {
         let five = Money.franc(5);
-        XCTAssertEqual(Money.franc(10), five.times(2));
-        XCTAssertEqual(Money.franc(15), five.times(3));
+        XCTAssertEqual(Money.franc(10), five.times(2))
+        XCTAssertEqual(Money.franc(15), five.times(3))
     }
     
     func testCurrency() {
-        XCTAssertEqual("USD", Money.dollar(1).currency);
-        XCTAssertEqual("CHF", Money.franc(1).currency);
+        XCTAssertEqual("USD", Money.dollar(1).currency)
+        XCTAssertEqual("CHF", Money.franc(1).currency)
     }
     
     func testSimpleAddition() {
@@ -61,7 +61,27 @@ class TDDbyETests: XCTestCase {
         let sum = five.plus(five)
         let bank = Bank()
         let reduced = bank.reduce(sum, to: "USD")
-        XCTAssertEqual(Money.dollar(10), reduced);
+        XCTAssertEqual(Money.dollar(10), reduced)
     }
     
+    func testPlusReturnsSum() {
+        let five = Money.dollar(5)
+        let result = five.plus(five)
+        let sum = result as! Sum
+        XCTAssertEqual(five, sum.augend)
+        XCTAssertEqual(five, sum.addend)
+    }
+    
+    func testReduceSum() {
+        let sum = Sum(augend: Money.dollar(3), addend: Money.dollar(4))
+        let bank = Bank();
+        let result = bank.reduce(sum, to: "USD")
+        XCTAssertEqual(Money.dollar(7), result)
+    }
+    
+    func testReduceMoney() {
+        let bank = Bank();
+        let result = bank.reduce(Money.dollar(1), to: "USD");
+        XCTAssertEqual(Money.dollar(1), result);
+    }
 }
