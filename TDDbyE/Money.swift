@@ -34,5 +34,5 @@ class Money: Equatable {
 func ==(lhs: Money, rhs: Money) -> Bool {
     return
         lhs.amount == rhs.amount &&
-        Mirror(reflecting: lhs).subjectType == Mirror(reflecting: rhs).subjectType
+        lhs.currency == rhs.currency
 }
