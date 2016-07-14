@@ -19,15 +19,15 @@ class Money: Equatable {
     
     // Abstract implementation
     func times(multiplier:Int) -> Money! {
-        return nil
+        return Money(amount: multiplier * amount, currency: currency)
     }
     
-    static func dollar(amount:Int) -> Dollar {
-        return Dollar(amount: amount, currency: "USD")
+    static func dollar(amount:Int) -> Money {
+        return Money(amount: amount, currency: "USD")
     }
     
-    static func franc(amount:Int) -> Franc {
-        return Franc(amount: amount, currency: "CHF")
+    static func franc(amount:Int) -> Money {
+        return Money(amount: amount, currency: "CHF")
     }
 }
 

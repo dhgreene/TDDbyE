@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE052F531D3696F70092F51F /* Dollar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE052F521D3696F70092F51F /* Dollar.swift */; };
-		BE052F571D374C700092F51F /* Frank.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE052F561D374C700092F51F /* Frank.swift */; };
 		BE052F591D374D350092F51F /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE052F581D374D350092F51F /* Money.swift */; };
 		BEEF9F6E1D36889700B502B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF9F6D1D36889700B502B3 /* AppDelegate.swift */; };
 		BEEF9F701D36889700B502B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF9F6F1D36889700B502B3 /* ViewController.swift */; };
@@ -37,8 +35,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BE052F521D3696F70092F51F /* Dollar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dollar.swift; sourceTree = "<group>"; };
-		BE052F561D374C700092F51F /* Frank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Frank.swift; sourceTree = "<group>"; };
 		BE052F581D374D350092F51F /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
 		BEEF9F6A1D36889700B502B3 /* TDDbyE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDDbyE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEEF9F6D1D36889700B502B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,12 +101,10 @@
 			children = (
 				BEEF9F6D1D36889700B502B3 /* AppDelegate.swift */,
 				BEEF9F6F1D36889700B502B3 /* ViewController.swift */,
-				BE052F521D3696F70092F51F /* Dollar.swift */,
 				BEEF9F711D36889700B502B3 /* Main.storyboard */,
 				BEEF9F741D36889700B502B3 /* Assets.xcassets */,
 				BEEF9F761D36889700B502B3 /* LaunchScreen.storyboard */,
 				BEEF9F791D36889700B502B3 /* Info.plist */,
-				BE052F561D374C700092F51F /* Frank.swift */,
 				BE052F581D374D350092F51F /* Money.swift */,
 			);
 			path = TDDbyE;
@@ -265,10 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE052F571D374C700092F51F /* Frank.swift in Sources */,
 				BE052F591D374D350092F51F /* Money.swift in Sources */,
 				BEEF9F701D36889700B502B3 /* ViewController.swift in Sources */,
-				BE052F531D3696F70092F51F /* Dollar.swift in Sources */,
 				BEEF9F6E1D36889700B502B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

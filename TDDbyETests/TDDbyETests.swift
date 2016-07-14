@@ -42,8 +42,6 @@ class TDDbyETests: XCTestCase {
     func testEquality() {
         XCTAssertEqual(Money.dollar(5), Money.dollar(5), "Equality test failed: $5 != $5")
         XCTAssertNotEqual(Money.dollar(5), Money.dollar(6), "Equality test failed: $5 == $6")
-        XCTAssertEqual(Money.franc(5), Money.franc(5), "Equality test failed: 5 francs != 5 francs")
-        XCTAssertNotEqual(Money.franc(5), Money.franc(6), "Equality test failed: 5 francs == 6 francs")
         XCTAssertNotEqual(Money.franc(5), Money.dollar(5), "Equality test failed: 5 francs == $5")
     }
     
@@ -56,9 +54,5 @@ class TDDbyETests: XCTestCase {
     func testCurrency() {
         XCTAssertEqual("USD", Money.dollar(1).currency);
         XCTAssertEqual("CHF", Money.franc(1).currency);
-    }
-    
-    func testDifferentClassEquality() {
-        XCTAssertEqual(Money(amount: 10, currency: "CHF"), Franc(amount: 10, currency: "CHF"));
     }
 }
