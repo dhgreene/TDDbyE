@@ -14,6 +14,19 @@ class Money: Equatable {
     init(amount:Int) {
         self.amount = amount
     }
+    
+    // Abstract implementation
+    func times(multiplier:Int) -> Money! {
+        return nil
+    }
+    
+    static func dollar(amount:Int) -> Dollar {
+        return Dollar(amount: amount)
+    }
+    
+    static func franc(amount:Int) -> Franc {
+        return Franc(amount: amount)
+    }
 }
 
 func ==(lhs: Money, rhs: Money) -> Bool {

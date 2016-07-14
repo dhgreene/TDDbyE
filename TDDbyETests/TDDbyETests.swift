@@ -34,23 +34,23 @@ class TDDbyETests: XCTestCase {
     }
     
     func testMultiplication() {
-        let five = Dollar(amount: 5)
-        XCTAssertEqual(Dollar(amount: 10), five.times(2))
-        XCTAssertEqual(Dollar(amount: 15), five.times(3))
+        let five = Money.dollar(5)
+        XCTAssertEqual(Money.dollar(10), five.times(2))
+        XCTAssertEqual(Money.dollar(15), five.times(3))
     }
     
     func testEquality() {
-        XCTAssertEqual(Dollar(amount: 5), Dollar(amount: 5), "Equality test failed: $5 != $5")
-        XCTAssertNotEqual(Dollar(amount: 5), Dollar(amount: 6), "Equality test failed: $5 == $6")
-        XCTAssertEqual(Franc(amount: 5), Franc(amount: 5), "Equality test failed: 5 francs != 5 francs")
-        XCTAssertNotEqual(Franc(amount: 5), Franc(amount: 6), "Equality test failed: 5 francs == 6 francs")
-        XCTAssertNotEqual(Franc(amount: 5), Dollar(amount: 5), "Equality test failed: 5 francs == $5")
+        XCTAssertEqual(Money.dollar(5), Money.dollar(5), "Equality test failed: $5 != $5")
+        XCTAssertNotEqual(Money.dollar(5), Money.dollar(6), "Equality test failed: $5 == $6")
+        XCTAssertEqual(Money.franc(5), Money.franc(5), "Equality test failed: 5 francs != 5 francs")
+        XCTAssertNotEqual(Money.franc(5), Money.franc(6), "Equality test failed: 5 francs == 6 francs")
+        XCTAssertNotEqual(Money.franc(5), Money.dollar(5), "Equality test failed: 5 francs == $5")
     }
     
     func testFrancMultiplication() {
-        let five = Franc(amount: 5);
-        XCTAssertEqual(Franc(amount: 10), five.times(2));
-        XCTAssertEqual(Franc(amount: 15), five.times(3));
+        let five = Money.franc(5);
+        XCTAssertEqual(Money.franc(10), five.times(2));
+        XCTAssertEqual(Money.franc(15), five.times(3));
     }
     
 }
