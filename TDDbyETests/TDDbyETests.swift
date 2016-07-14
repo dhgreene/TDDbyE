@@ -44,4 +44,10 @@ class TDDbyETests: XCTestCase {
         XCTAssertNotEqual(Dollar(amount: 5), Dollar(amount: 6), "Equality test failed: $5 != $6")
     }
     
+    func testFrancMultiplication() {
+        let five = Franc(amount: 5);
+        XCTAssertEqual(Franc(amount: 10), five.times(2));
+        XCTAssertEqual(Franc(amount: 15), five.times(3));
+    }
+    
 }
