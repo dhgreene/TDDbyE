@@ -33,4 +33,10 @@ class TDDbyETests: XCTestCase {
         }
     }
     
+    func testMultiplication() {
+        let five = Dollar(amount: 5);
+        five.times(2);
+        XCTAssertEqual(10, five.amount);
+    }
+    
 }
