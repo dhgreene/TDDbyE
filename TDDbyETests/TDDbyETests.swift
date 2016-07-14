@@ -84,4 +84,16 @@ class TDDbyETests: XCTestCase {
         let result = bank.reduce(Money.dollar(1), to: "USD");
         XCTAssertEqual(Money.dollar(1), result);
     }
+    
+    func testReduceMoneyDifferentCurrency() {
+        let bank = Bank()
+        bank.addRate("CHF", to: "USD", rate: 2);
+        let result = bank.reduce(Money.franc(2), to: "USD");
+        XCTAssertEqual(Money.dollar(1), result);
+    }
+    
+    func testIdentityRate() {
+        XCTAssertEqual(1, Bank().rate("USD", to: "USD"));
+    }
+				
 }
